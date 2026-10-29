@@ -2,7 +2,7 @@ import React from "react";
 import { AbsoluteFill, Audio, Easing, OffthreadVideo, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import transcript from "./adsTranscript.json";
 
-/* Anúncios curtos do Leandro Marques com o tratamento "Editor Fit": legendas dinâmicas,
+/* Anúncios curtos de exemplo com o tratamento "Editor Fit": legendas dinâmicas,
    zoom nos pontos de ênfase, painéis divididos com gráfico e CTA final. 9:16, 1080x1920. */
 
 export const AD_FPS = 30;
@@ -286,7 +286,7 @@ export const AdEdit: React.FC<{ id: AdId; band?: boolean }> = ({ id, band }) => 
       {id !== "2715" && !band ? (
         <>
           {!band ? <div style={{ position: "absolute", left: 40, right: 40, top: 910, textAlign: "center", fontFamily: FONT, fontSize: 40, lineHeight: 1.15, color: C.text, WebkitTextStroke: "5px #000", paintOrder: "stroke fill" }}>
-            NUTRI / PERSONAL<br /><span style={{ color: C.accent }}>Edite Reels em 2 minutos</span>
+            SEU NICHO<br /><span style={{ color: C.accent }}>Edite Reels em 2 minutos</span>
           </div> : null}
           <div style={{ position: "absolute", left: 0, right: 0, top: 1490 - B, display: "flex", justifyContent: "center", opacity: Math.floor(frame / 18) % 2 === 0 ? 1 : 0.15 }}>
             <div style={{ background: C.accent, color: "#0b0b12", fontFamily: FONT, fontSize: 42, padding: "10px 26px", borderRadius: 18, boxShadow: "0 10px 30px rgba(0,0,0,.55)" }}>EDITOR FIT COM IA</div>
@@ -300,7 +300,7 @@ export const AdEdit: React.FC<{ id: AdId; band?: boolean }> = ({ id, band }) => 
             <div style={{ fontFamily: FONT, fontSize: 52, color: C.text, WebkitTextStroke: "6px #000", paintOrder: "stroke fill" }}>SIGA</div>
           ) : null}
           <div style={{ background: C.accent, color: "#0b0b12", fontFamily: FONT, fontSize: id === "2714" ? 42 : 70, padding: "22px 40px", borderRadius: 999, boxShadow: "0 12px 34px rgba(0,0,0,.5)", transform: `scale(${1 + Math.sin(frame / 6) * 0.03})`, textAlign: "center" }}>
-            {id === "2714" ? "@personaleandromarques.nutri" : "Clique em SAIBA MAIS"}
+            {id === "2714" ? "@seu.perfil" : "Clique em SAIBA MAIS"}
           </div>
           {id !== "2715" ? <div style={{ fontFamily: FONT, fontSize: 30, color: C.text, WebkitTextStroke: "5px #000", paintOrder: "stroke fill" }}>(EDITOR FIT COM IA - CLICA EM SAIBA MAIS)</div> : null}
           {id !== "2714" ? <div style={{ fontFamily: FONT, fontSize: 90, color: C.accent, transform: `translateY(${bounce}px)`, WebkitTextStroke: "5px #000", paintOrder: "stroke fill" }}>↓</div> : null}
