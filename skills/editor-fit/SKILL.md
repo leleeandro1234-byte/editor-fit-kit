@@ -22,3 +22,6 @@ description: Editor Fit com IA. Edita vídeos de nutricionistas e personal train
 
 ## Regra de ouro
 Todo painel com número leva o selo "Exemplo ilustrativo · valores aproximados".
+
+## Chaves opcionais
+Se faltar `GEMINI_API_KEY` em `.env.local`, edite normalmente SEM narração/imagens geradas. Explique o que a chave libera e aponte `curso/00-configurar-chaves.md`. Nunca peça para o aluno colar a chave no chat.

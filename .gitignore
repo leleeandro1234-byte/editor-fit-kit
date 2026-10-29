@@ -3,3 +3,7 @@ out
 .DS_Store
 *.mov
 *.wav
+.env
+.env.local
+aulas/out
+aulas/public/audio
