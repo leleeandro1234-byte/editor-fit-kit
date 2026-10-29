@@ -17,8 +17,12 @@ Kit para nutricionistas e personal trainers editarem vídeos fit com o Claude Co
 ## Usar
 Abra o Claude Code e diga: `editor fit, quero um vídeo sobre <seu tema>`.
 
+## Aulas em vídeo
+Veja `aulas/README.md`. Quatro aulas curtas: instalar o Claude Code, instalar o kit, configurar chave (opcional) e primeiro vídeo.
+
 ## Estrutura
 - `skills/` skills do Claude (editor-fit, remotion-ads)
 - `template/` projeto Remotion base
-- `curso/` aulas
+- `curso/` texto de apoio
+- `aulas/` aulas em vídeo (roteiros + código)
 - `exemplos/` vídeos de exemplo
