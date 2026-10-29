@@ -1,6 +1,7 @@
 import React from "react";
 import { AbsoluteFill, Audio, Easing, OffthreadVideo, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
-import transcript from "./adsTranscript.json";
+// Transcrição por palavra: mesmo formato de ../src/transcript.json, uma lista por anúncio (ex.: { "2714": [...] }).
+import transcript from "../src/transcript.json";
 
 /* Anúncios curtos de exemplo com o tratamento "Editor Fit": legendas dinâmicas,
    zoom nos pontos de ênfase, painéis divididos com gráfico e CTA final. 9:16, 1080x1920. */
