@@ -1,0 +1,50 @@
+[
+  {
+    "id": "aula1", "titulo": "Instalar o Claude Code",
+    "steps": [
+      { "titulo": "O que vamos fazer", "fala": "Nesta aula você instala o Claude Code no seu computador. Leva uns dois minutos, e eu te mostro cada passo.", "bullets": ["Instalar o Claude Code", "Fazer login", "Testar"] },
+      { "titulo": "O que você precisa", "fala": "Antes de começar, você precisa de uma assinatura do Claude, plano Pro ou Max. Se ainda não tem, crie a conta em claude ponto A I.", "bullets": ["Conta no claude.ai", "Plano Pro ou Max", "Um computador Mac ou Windows"] },
+      { "titulo": "Abra o Terminal", "fala": "No Mac, aperte Command e Espaço, digite Terminal e aperte Enter. No Windows, abra o menu Iniciar, digite PowerShell e abra.", "bullets": ["Mac: Command + Espaço → Terminal", "Windows: Iniciar → PowerShell"] },
+      { "titulo": "Instalar no Mac", "fala": "No Mac, copie este comando, cole no Terminal e aperte Enter. Espere terminar.", "plataforma": "Mac", "comando": "curl -fsSL https://claude.ai/install.sh | bash" },
+      { "titulo": "Instalar no Windows", "fala": "No Windows, copie este comando, cole no PowerShell e aperte Enter. Espere terminar.", "plataforma": "Windows", "comando": "irm https://claude.ai/install.ps1 | iex" },
+      { "titulo": "Abrir e fazer login", "fala": "Agora feche e abra o terminal de novo, digite claude e aperte Enter. O navegador abre para você entrar na sua conta.", "comando": "claude" },
+      { "titulo": "Teste rápido", "fala": "Pronto! Escreva oi e aperte Enter. Se o Claude responder, está tudo instalado. Na próxima aula, vamos instalar o kit do Editor Fit.", "bullets": ["Digite: oi", "O Claude respondeu? Instalado!"] }
+    ]
+  },
+  {
+    "id": "aula2", "titulo": "Instalar o Kit Editor Fit",
+    "steps": [
+      { "titulo": "O que vamos fazer", "fala": "Agora você instala o kit do Editor Fit. Ele coloca as skills no seu Claude Code, e depois ele sabe editar vídeos fit.", "bullets": ["Baixar o kit", "Rodar o instalador", "Conferir"] },
+      { "titulo": "Instale o Node.js", "fala": "Primeiro, instale o Node ponto J S, que o template precisa. Acesse node J S ponto org e baixe a versão L T S.", "bullets": ["nodejs.org", "Baixe a versão LTS", "Instale clicando em Avançar"] },
+      { "titulo": "Baixe o kit", "fala": "Abra o link do kit que enviamos, clique no botão verde Code, e depois em Download ZIP. Descompacte a pasta na sua área de Downloads.", "bullets": ["Botão verde: Code", "Download ZIP", "Descompactar em Downloads"] },
+      { "titulo": "Entre na pasta", "fala": "No terminal, entre na pasta do kit com este comando.", "comando": "cd ~/Downloads/editor-fit-kit" },
+      { "titulo": "Rode o instalador", "fala": "Agora rode o instalador. No Windows, use o Git Bash, que vem junto com o Git.", "comando": "./install.sh" },
+      { "titulo": "Confira", "fala": "Você deve ver a mensagem Instalada, com o nome de cada skill. Se viu, o kit está pronto.", "bullets": ["Instalada: editor-fit", "Instalada: remotion-ads", "Pronto!"] },
+      { "titulo": "Instale o template", "fala": "Por último, instale as peças do template de vídeo. Isso roda uma vez só.", "comando": "cd template && npm install" }
+    ]
+  },
+  {
+    "id": "aula3", "titulo": "Configurar a chave do Gemini (opcional)",
+    "steps": [
+      { "titulo": "Para que serve", "fala": "Esta aula é opcional. A chave do Gemini libera narração por inteligência artificial e imagens geradas. Sem ela, você edita vídeos normalmente.", "bullets": ["Opcional", "Libera narração por IA", "Libera imagens geradas"] },
+      { "titulo": "Crie a chave", "fala": "Acesse A I studio ponto google ponto com, barra apikey. Entre com sua conta Google e clique em Create API key.", "bullets": ["aistudio.google.com/apikey", "Entre com a conta Google", "Create API key"] },
+      { "titulo": "Copie a chave", "fala": "Copie o código que aparece. Ele é como uma senha: não mostre para ninguém.", "bullets": ["Copie o código", "Não compartilhe", "Não cole em chats"] },
+      { "titulo": "Crie o arquivo de chaves", "fala": "Na pasta do kit, rode este comando para criar o seu arquivo de chaves.", "comando": "cp .env.example .env.local" },
+      { "titulo": "Cole a chave", "fala": "Abra o arquivo ponto env ponto local num editor de texto e cole a chave depois do sinal de igual, sem espaços e sem aspas. Salve.", "comando": "GEMINI_API_KEY=cole_sua_chave_aqui" },
+      { "titulo": "Segurança", "fala": "Esse arquivo fica só no seu computador e nunca vai para o GitHub. Se a chave vazar, apague no site e crie outra.", "bullets": ["Fica só no seu computador", "Nunca vai para o GitHub", "Vazou? Apague e gere outra"] },
+      { "titulo": "Teste", "fala": "Para testar, abra o Claude Code e peça: gere uma narração de teste. Se saiu o áudio, está funcionando.", "comando": "claude" }
+    ]
+  },
+  {
+    "id": "aula4", "titulo": "Seu primeiro vídeo editado",
+    "steps": [
+      { "titulo": "O que vamos fazer", "fala": "Agora é a parte divertida: gravar um vídeo e deixar o Editor Fit editar com legendas, zoom e painéis.", "bullets": ["Gravar", "Pedir a edição", "Renderizar"] },
+      { "titulo": "Grave o vídeo", "fala": "Grave com o celular em pé, na vertical, com luz de frente e sem barulho. Espere um segundo em silêncio antes de falar e depois de terminar. Fale os números devagar.", "bullets": ["Celular na vertical (9:16)", "Luz de frente", "1 segundo de silêncio no início e no fim", "Fale os números devagar"] },
+      { "titulo": "Salve o vídeo", "fala": "Copie o vídeo para a pasta template, public, e dê o nome meu traço video ponto m p quatro.", "comando": "template/public/meu-video.mp4" },
+      { "titulo": "Peça a edição", "fala": "Abra o Claude Code na pasta do kit e escreva este pedido.", "comando": "editor fit, edite o meu-video.mp4" },
+      { "titulo": "Veja a prévia", "fala": "O Claude transcreve a sua fala, coloca legenda palavra por palavra, zoom e o chamado para ação. Peça a prévia para ver o resultado.", "bullets": ["Legendas automáticas", "Zoom e cortes", "Chamada para ação no final"] },
+      { "titulo": "Peça ajustes", "fala": "Não gostou de algo? É só pedir em português. Por exemplo: mais zoom nesta palavra, ou, compare ovo e manteiga na tela dividida.", "bullets": ["\"Mais zoom na palavra emagrecer\"", "\"Compare ovo e manteiga lado a lado\"", "\"Adicione o painel de calorias\""] },
+      { "titulo": "Renderize", "fala": "Quando estiver bom, peça: renderize o vídeo. Ele fica salvo na pasta out. Os painéis de números sempre levam o selo exemplo ilustrativo. Agora é só postar!", "comando": "renderize o vídeo" }
+    ]
+  }
+]
